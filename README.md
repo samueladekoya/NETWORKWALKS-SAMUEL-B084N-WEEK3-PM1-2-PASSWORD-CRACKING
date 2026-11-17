@@ -49,22 +49,22 @@ Understanding how protected files store credentials is essential for security au
 1. **Environment Configuration:**
    * Installed Johnny GUI and configured the backend binary path under **Settings** to point directly to `...\john-1.9.0-jumbo-1-win64\run\john.exe`.
    * Verified engine detection (`Detected John the Ripper 1.9.0-jumbo-1 OMP`).
-    ![](Screenshot%20(648).png)
+![](Screenshot%20(648).png)
 
 2. **Cryptographic Hash Extraction:**
    * Processed `My Locked PDF1.pdf` to extract its `pdf2john`-compatible hash string starting with `$pdf$4*4*128*...`.
    * Saved the clean hash string into a plain-text file (`hash1.txt`).
-   ![](Screenshot%20(660).png)
+![](Screenshot%20(660).png)
 
 3. **Dictionary Attack Execution:**
    * Loaded `hash1.txt` into Johnny via **Open password file (PASSWD format)**.
    * Initiated the audit via **Start new attack**.
    * John the Ripper matched the hash against its built-in wordlist rules and recovered the plaintext password: **`good-luck`**.
-   ![](Screenshot%20(652).png)
+![](Screenshot%20(652).png)
 
 4. **Verification:**
    * Opened `My Locked PDF1.pdf` in Google Chrome, entered `good-luck`, and confirmed access to the target flag document.
-   ![](Screenshot%20(656).png)
+![](Screenshot%20(656).png)
 
 ---
 
@@ -77,17 +77,17 @@ Understanding how protected files store credentials is essential for security au
 1. **Client-Side Hash Extraction:**
    * Loaded `My Locked PDF2.pdf` (65.2 KB) into the NetworkWalks Hash Calculator.
    * Verified encryption metadata (**Revision: R4 | Version: V4 | Key length: 128-bit**) and copied the generated `$pdf$` hash string.
-   ![](Screenshot%20(661).png)
+![](Screenshot%20(661).png)
 
 2. **Browser-Based Dictionary Attack:**
    * Pasted the full `$pdf$` hash string into the NetworkWalks Password Cracker.
    * Executed the dictionary attack using the active built-in wordlist (100 common passwords).
    * At entry `91 / 100` (`9 pw/s`), the tool identified a cryptographic match: **`password1`**.
-   ![](Screenshot%20(659).png)
+![](Screenshot%20(659).png)
 
 3. **Verification:**
    * Verified the recovered credential against the encrypted PDF to unlock the document and confirm flag capture.
-   ![](Screenshot%20(654).png)
+![](Screenshot%20(654).png)
 
 ---
 
