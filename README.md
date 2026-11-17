@@ -12,7 +12,7 @@ Cybersecurity &amp; Ethical Hacking internship project (Week 3) focusing on cryp
 ---
 
 ## 1. Authorization & Ethical Compliance Disclaimer
-> **Disclaimer:** All password auditing, hash extraction, and dictionary attack exercises documented in this report were performed strictly within an authorized educational lab environment using sample encrypted files (`My Locked PDF1.pdf`) provided by NetworkWalks Training Academy. The methodologies demonstrated herein are intended solely for defensive security auditing, password policy evaluation, and educational purposes.
+> **Disclaimer:** All password auditing, hash extraction, and dictionary attack exercises documented in this report were performed strictly within an authorized educational lab environment using sample encrypted files (`My Locked PDF1.pdf & My Locked PDF2.pdf`) provided by NetworkWalks Training Academy. The methodologies demonstrated herein are intended solely for defensive security auditing, password policy evaluation, and educational purposes.
 
 ---
 
@@ -22,7 +22,7 @@ During Week 3 of the Cybersecurity & Ethical Hacking internship, two hands-on pr
 * **Project Module 1 (`W3-PM1`):** Local hash extraction and dictionary-based password recovery using **John the Ripper (JTR)** CLI and the **Johnny** graphical user interface.
 * **Project Module 2 (`W3-PM2`):** Browser-based local hash parsing and dictionary attack execution using the **NetworkWalks Hash Calculator** and **NetworkWalks Password Cracker** utilities.
 
-Both methodologies successfully extracted the cryptographic hash of the target document (`My Locked PDF2.pdf`), recovered the plaintext password (`password1`), and decrypted the file to verify authorization and capture the lab flag.
+Both methodologies successfully extracted the cryptographic hash of the target document (`My Locked PDF2.pdf`), recovered the plaintext passwords (`good-luck & password1`), and decrypted the file to verify authorization and capture the lab flag.
 
 ---
 
@@ -75,7 +75,7 @@ Understanding how protected files store credentials is essential for security au
 * **Dictionary Attack:** [NetworkWalks Password Cracker](https://networkwalks.com/password-cracker/) (browser-based dictionary engine)
 ### 5.2 Execution Workflow
 1. **Client-Side Hash Extraction:**
-   * Loaded `My Locked PDF2.pdf` (65.2 KB) into the NetworkWalks Hash Calculator.
+   * Loaded `My Locked PDF2.pdf` into the NetworkWalks Hash Calculator.
    * Verified encryption metadata (**Revision: R4 | Version: V4 | Key length: 128-bit**) and copied the generated `$pdf$` hash string.
 ![](Screenshot%20(661).png)
 
